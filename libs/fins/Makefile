@@ -44,15 +44,14 @@ define Package/libfins/description
 endef
 
 define Build/Prepare
-    $(call Build/Prepare/Default)
+	$(call Build/Prepare/Default)
 endef
 
 define Build/InstallDev
-    $(INSTALL_DIR) $(1)/usr/include
-    $(CP) $(PKG_INSTALL_DIR)/usr/include/fins.h $(1)/usr/include/
-
-    $(INSTALL_DIR) $(1)/usr/lib
-    $(CP) $(PKG_INSTALL_DIR)/usr/lib/libfins.{a,so*} $(1)/usr/lib/
+	$(INSTALL_DIR) $(1)/usr/include
+	$(CP) $(PKG_INSTALL_DIR)/usr/include/fins.h $(1)/usr/include/
+	$(INSTALL_DIR) $(1)/usr/lib
+	$(CP) $(PKG_INSTALL_DIR)/usr/lib/libfins.{a,so*} $(1)/usr/lib/
 endef
 
 define Package/libfins/install
